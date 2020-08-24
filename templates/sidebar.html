@@ -1,0 +1,134 @@
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#"></a>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-link">
+      <img src="{{ url_for('static', filename='dist/img/sntmn.png')}}" alt="AdminLTE Logo" class="brand-image " style="opacity: .8">
+      <span class="brand-text font-weight-light">__</span>
+    </a>
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+         
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                Data Training
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/dataTraining" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/prosesTraining" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Proses</p>
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a href="/perhitunganTraining" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Perhitungan</p>
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a href="/dataTraining/akurasiRule" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Akurasi Rule</p>
+                </a>
+              </li>         
+          </ul>
+        </ul>
+      </nav>
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+         
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                Data Testing
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/dataTesting" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/prosesTesting" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Proses</p>
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a href="/perhitungan" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Perhitungan</p>
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a href="/dataTesting/akurasi" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Akurasi Rule</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/craw" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Crawling</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="/dataTesting/akurasiRule" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Chart</p>
+                </a>
+              </li>   
+            </ul>
+        </ul>
+      </nav>
+      
+     <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+         
+          <li class="nav-item has-treeview">
+            <a href="/ujiCoba" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>Tes Text</p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

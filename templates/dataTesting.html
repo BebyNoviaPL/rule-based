@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% include "header.html" %}
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+{% include "sidebar.html" %}
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>DataTables 
+              {%with messages = get_flashed_messages()%}
+                {%if messages==1%}
+                <span class="badge badge-success">Data Inserted</span>
+                {%endif%}
+              {%endwith%}
+            </h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+            </ol>
+          </div>
+          <div class="col-sm-6">
+            <form action="/dataTesting/uploadTesting" method="POST" enctype="multipart/form-data">
+              <div class="input-group mb-3">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" name="file">
+                  <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Upload excel file</label>
+                </div>
+                <div class="input-group-append">
+                  <button type="submit" class="input-group-text" id="inputGroupFileAddon02">Upload</button>
+                </div>
+              </div>
+            </form> 
+          </div>
+          <!-- <div class="col-sm-6">
+            <a href="/dataTesting/downloadTesting" class="btn btn-success">Download</a>
+            <a href="/dataTesting/Template" class="btn btn-info">Template</a>
+          </div> -->
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col md -12">
+
+            <div class="card">
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Created</th>
+                    <th>Tweet</th>
+                  
+                    
+                    
+                  </tr>
+                  </thead>
+                  <tbody>
+                      {% for rs in data_testing %}
+                      <tr>
+                          <td>{{ loop.index }}</td>
+                          <td>{{ rs.0 }}</td>
+                          <td>{{ rs.1 }}</td>
+                         
+                      </tr>
+                      {% endfor %}
+                  </tbody>
+                  
+                 
+                </table>
+              </div>
+              </div>
+              <!-- /.card-body -->
+           
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  {% include "footer.html" %}
+</body>
+</html>
